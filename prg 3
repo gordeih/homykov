@@ -1,0 +1,26 @@
+program prg3
+implicit none
+REAL A(1:11), B(1:11), C(1:11), s, m, l
+integer i
+
+print *,"vedite storoni a"
+read *,A(1:11)
+
+print *,"vedite storoni b"
+read *,B(1:11)
+
+print *,"vedite ugol"
+read *,C(1:11)
+i=1
+m=a(i)*b(i)
+do while(i<4)
+s=A(i)*B(i)*sin(C(i)/180*3.14)/2
+if(s<m) then
+l = a(i)
+m=S
+end if
+i=i+1
+end do
+l=2*m/l
+print*,l
+end program prg3
