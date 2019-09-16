@@ -1,0 +1,9 @@
+program sum
+    REAL a,b,c,p
+    a= 101
+    b= 77
+    c= 123
+    p=a*b
+    if ((a<b).and.(a<c))  p=b*c
+    if ((b<a).and.(b<c))   p=a*c
+    if ((c<b) .and. (c<a))  p=a*b
