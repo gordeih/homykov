@@ -1,0 +1,45 @@
+program z2
+implicit none
+real a, b, c, d
+
+print *,'a='
+read*,a
+
+print *,'b='
+read*,b
+
+print *,'c='
+read*,c
+
+if(b > a) then
+d=a
+a=b
+b=d
+end if
+
+if(c > a) then
+d=a
+a=c
+c=d
+end if
+
+if(c > b) then
+d=b
+b=c
+c=d
+end if
+
+d=0
+if ( a > (c+b)) d=1
+
+if(d == 0 ) then
+print*,"suchestvuet"
+if(a*a == b*b + c*c) print *,"=90g"
+if(a*a > b*b + c*c) print*,">90g"
+if(a*a < b*b + c*c) print *,"<90g"
+end if
+
+if(d == 1 ) then
+print*,"ne suchestvuet"
+print*,"oshibka"
+end if
