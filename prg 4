@@ -1,0 +1,21 @@
+program p4
+implicit none
+real e,n,k,s
+
+e=0.01
+
+n=1
+s=1-log10(n)
+k=S
+n=2
+
+do while(abs(k)>e)
+k=1/n+log10(n-1)-log10(n)
+s=s+k
+n=n+1
+end do
+
+print *,n
+print *,s
+    
+end program p4
