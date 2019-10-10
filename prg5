@@ -1,0 +1,57 @@
+program p5 
+implicit none 
+
+integer X(-5:5,-5:5) 
+real i,j 
+
+print*,"-5- - - - 0 - - - - 5" 
+write(*,*) 
+
+i=-5 
+j=-5 
+
+do while(i<6) 
+do while(j<6) 
+X(i,j)=1 
+j=j+1 
+end do 
+i=i+1 
+j=-5 
+end do 
+
+i=-5 
+j=-5 
+
+do while(i<6) 
+do while(j<6) 
+if(j>1.5) X(i,j)=0 
+if(j<-1.5) X(i,j)=0 
+j=j+1 
+end do 
+i=i+1 
+j=-5 
+end do 
+
+i=-5 
+j=-5 
+
+do while(i<6) 
+do while(j<6) 
+if(-COSH(j)>i) X(i,j)=0 
+if(-SINH(j)<i) X(i,j)=0 
+j=j+1 
+end do 
+i=i+1 
+j=-5 
+end do 
+
+
+do i=-5,5 
+do j=-5,5 
+if(X(i,j)==1) write(*,fmt="(1x,a,i0)",advance="no") '*'
+if(X(i,j)==0) write(*,fmt="(1x,a,i0)",advance="no") '-'
+end do 
+print*,-i 
+end do 
+
+end program p5
