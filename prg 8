@@ -1,0 +1,42 @@
+program lab8 
+
+implicit none 
+real matrix(5,5), t 
+INTEGER i, j 
+
+data matrix/ 2,2,2,2,2, & 
+2,2,-2,2,-2, & 
+-2,2,2,2,2, & 
+2,2,2,2,-2, & 
+2,2,2,2,2/ 
+
+
+
+do j = 1, 5 
+do i = 1, 5 
+t=matrix(i,j) 
+call kontr(i,j,t) 
+matrix(i,j)=t 
+end do 
+end do 
+
+do i = 1, 5 
+do j = 1, 5 
+print '(" ", f5.2$)', matrix(j, i) 
+end do 
+print*, ' ' 
+end do 
+
+end program lab8 
+
+
+
+subroutine kontr(i,j,t) 
+
+if ( j > (3 + abs(i-3) )) t=1 
+if ( j < (3 - abs(i-3) )) t=1 
+if (( i > (3 + abs(j-3) )) .and. (t<0)) t=0 
+if (( i < (3 - abs(j-3) )).and. (t<0)) t=0 
+
+
+end subroutine kontr
