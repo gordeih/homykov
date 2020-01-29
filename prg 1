@@ -7,3 +7,6 @@ program sum
     if ((a<b).and.(a<c))  p=b*c
     if ((b<a).and.(b<c))   p=a*c
     if ((c<b) .and. (c<a))  p=a*b
+    print*,'naibolshee proisvedenie:'
+    print*,p
+end program sum
