@@ -30,7 +30,7 @@ c=d
 end if
 
 d=0
-if ( a > (c+b)) d=1
+if ( a >= (c+b)) d=1
 
 if(d == 0 ) then
 print*,"suchestvuet"
@@ -43,3 +43,4 @@ if(d == 1 ) then
 print*,"ne suchestvuet"
 print*,"oshibka"
 end if
+end program z2
